@@ -38,6 +38,9 @@ def build_model(detector_backend):
             face_detector_obj[detector_backend] = face_detector
         else:
             raise ValueError("invalid detector_backend passed - " + detector_backend)
+        
+    print(f"Globals for Face Detector are: {globals()}")
+    print(f"Model object for deep face detector is: {globals().get('face_detector_obj')}")
 
     return face_detector_obj[detector_backend]
 

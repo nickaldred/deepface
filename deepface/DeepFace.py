@@ -81,6 +81,9 @@ def build_model(model_name):
             model_obj[model_name] = model
         else:
             raise ValueError(f"Invalid model_name passed - {model_name}")
+        
+    print(f"Globals for deepface are: {globals()}")
+    print(f"Model object for deepface is: {globals().get('model_obj')}")
 
     return model_obj[model_name]
 
